@@ -8,1131 +8,638 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Veylo</title>
-
-  <link
-    rel="stylesheet"
-    href="/style.css"
+  <meta
+    name="description"
+    content="Veylo - シンプルで快適なコミュニケーションを。"
   >
+
+  <title>Veylo - Connect your world.</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ==================================================
-       認証画面
-  ================================================== -->
+  <!-- =========================
+       Header
+  ========================== -->
 
-  <div
-    id="authScreen"
-    class="screen"
-  >
+  <header class="site-header" id="siteHeader">
 
-    <div class="auth-container">
+    <div class="header-inner">
 
-      <div class="logo-area">
-        <h1>Veylo</h1>
-        <p>気軽につながるチャット</p>
-      </div>
+      <a href="#" class="logo">
+        <span class="logo-mark">V</span>
+        <span class="logo-text">Veylo</span>
+      </a>
 
+      <nav class="nav" id="nav">
 
-      <!-- ================================
-           ログイン
-      ================================= -->
+        <a href="#features">特徴</a>
+        <a href="#about">Veyloについて</a>
+        <a href="#preview">プレビュー</a>
 
-      <div
-        id="loginPanel"
-        class="auth-panel"
+        <a
+          href="https://veylo.onrender.com/"
+          class="nav-button"
+          target="_blank"
+          rel="noopener"
+        >
+          Veyloを使う
+        </a>
+
+      </nav>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="メニューを開く"
+        aria-expanded="false"
       >
-
-        <h2>ログイン</h2>
-
-        <form id="loginForm">
-
-          <div class="input-group">
-
-            <label for="loginName">
-              ユーザー名
-            </label>
-
-            <input
-              id="loginName"
-              type="text"
-              autocomplete="username"
-              placeholder="ユーザー名"
-              required
-            >
-
-          </div>
-
-
-          <div class="input-group">
-
-            <label for="loginPassword">
-              パスワード
-            </label>
-
-            <input
-              id="loginPassword"
-              type="password"
-              autocomplete="current-password"
-              placeholder="パスワード"
-              required
-            >
-
-          </div>
-
-
-          <div
-            id="loginError"
-            class="form-error"
-          ></div>
-
-
-          <button
-            type="submit"
-            class="primary-button"
-          >
-            ログイン
-          </button>
-
-        </form>
-
-
-        <button
-          id="forgotPasswordButton"
-          type="button"
-          class="text-button"
-        >
-          パスワードを忘れた方
-        </button>
-
-
-        <button
-          id="showRegisterButton"
-          type="button"
-          class="secondary-button"
-        >
-          新規登録
-        </button>
-
-      </div>
-
-
-      <!-- ================================
-           新規登録
-      ================================= -->
-
-      <div
-        id="registerPanel"
-        class="auth-panel hidden"
-      >
-
-        <h2>新規登録</h2>
-
-        <form id="registerForm">
-
-          <div class="input-group">
-
-            <label for="registerEmail">
-              メールアドレス
-            </label>
-
-            <input
-              id="registerEmail"
-              type="email"
-              autocomplete="email"
-              placeholder="メールアドレス"
-              required
-            >
-
-          </div>
-
-
-          <div class="input-group">
-
-            <label for="registerName">
-              ユーザー名
-            </label>
-
-            <input
-              id="registerName"
-              type="text"
-              autocomplete="username"
-              placeholder="ユーザー名"
-              required
-            >
-
-          </div>
-
-
-          <div class="input-group">
-
-            <label for="registerPassword">
-              パスワード
-            </label>
-
-            <input
-              id="registerPassword"
-              type="password"
-              autocomplete="new-password"
-              placeholder="パスワード"
-              required
-            >
-
-          </div>
-
-
-          <div
-            id="registerError"
-            class="form-error"
-          ></div>
-
-
-          <button
-            type="submit"
-            class="primary-button"
-          >
-            登録する
-          </button>
-
-        </form>
-
-
-        <button
-          id="showLoginButton"
-          type="button"
-          class="text-button"
-        >
-          ログインに戻る
-        </button>
-
-      </div>
-
-
-      <!-- ================================
-           パスワードリセット
-      ================================= -->
-
-      <div
-        id="forgotPanel"
-        class="auth-panel hidden"
-      >
-
-        <h2>パスワードを忘れた方</h2>
-
-        <form id="forgotForm">
-
-          <div class="input-group">
-
-            <label for="forgotEmail">
-              メールアドレス
-            </label>
-
-            <input
-              id="forgotEmail"
-              type="email"
-              autocomplete="email"
-              placeholder="メールアドレス"
-              required
-            >
-
-          </div>
-
-
-          <div
-            id="forgotMessage"
-            class="form-message"
-          ></div>
-
-
-          <button
-            type="submit"
-            class="primary-button"
-          >
-            リセットメールを送信
-          </button>
-
-        </form>
-
-
-        <button
-          id="backToLoginButton"
-          type="button"
-          class="text-button"
-        >
-          ログインに戻る
-        </button>
-
-      </div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
 
-  </div>
+  </header>
 
 
-  <!-- ==================================================
-       アプリ画面
-  ================================================== -->
+  <main>
 
-  <div
-    id="appScreen"
-    class="screen hidden"
-  >
+    <!-- =========================
+         Hero
+    ========================== -->
 
-    <div class="app-layout">
+    <section class="hero">
 
-
-      <!-- ==================================================
-           サイドバー
-      ================================================== -->
-
-      <aside class="sidebar">
-
-        <!-- ================================
-             ヘッダー
-        ================================= -->
-
-        <div class="sidebar-header">
-
-          <div class="brand">
-            <span class="brand-mark">V</span>
-
-            <span class="brand-name">
-              Veylo
-            </span>
-          </div>
-
-
-          <button
-            id="settingsButton"
-            type="button"
-            class="icon-button"
-            title="設定"
-          >
-            ⚙
-          </button>
-
-        </div>
-
-
-        <!-- ================================
-             ユーザー
-        ================================= -->
-
-        <div class="user-card">
-
-          <div class="user-avatar" aria-hidden="true">
-            <img id="userAvatarImage" class="user-avatar-image hidden" alt="">
-            <span>U</span>
-          </div>
-
-          <div class="user-info">
-
-            <div class="user-label">
-              ログイン中
-            </div>
-
-            <div
-              id="usernameInput"
-              class="username-display"
-              role="button"
-              tabindex="0"
-              aria-label="プロフィールを開く"
-            >
-              ユーザー
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- ================================
-             ルーム
-        ================================= -->
-
-        <div class="room-section">
-
-          <div class="section-title">
-
-            <span>
-              ルーム
-            </span>
-
-          </div>
-
-
-          <!-- 雑談 -->
-
-          <button
-            id="casualRoomButton"
-            type="button"
-            class="room-button active"
-          >
-
-            <span class="room-icon">
-              💬
-            </span>
-
-            <span class="room-button-text">
-              雑談
-            </span>
-
-          </button>
-
-
-          <!-- 部屋作成 -->
-
-          <button
-            id="createRoomButton"
-            type="button"
-            class="room-action-button"
-          >
-
-            <span>
-              ＋
-            </span>
-
-            <span>
-              部屋を作成
-            </span>
-
-          </button>
-
-
-          <!-- 部屋参加 -->
-
-          <button
-            id="joinRoomButton"
-            type="button"
-            class="room-action-button"
-          >
-
-            <span>
-              ↪
-            </span>
-
-            <span>
-              部屋に参加
-            </span>
-
-          </button>
-
-
-          <!-- ================================
-               ダイレクトメッセージ
-          ================================= -->
-
-          <div class="dm-section">
-
-            <div class="dm-section-header">
-              <span>ダイレクトメッセージ</span>
-              <button
-                id="userSearchButton"
-                type="button"
-                class="dm-add-button"
-                title="ユーザーを検索"
-              >
-                ＋
-              </button>
-            </div>
-
-            <div id="dmList" class="dm-list"></div>
-
-          </div>
-
-          <!-- ================================
-               参加中の部屋
-          ================================= -->
-
-          <div class="joined-room-section">
-
-            <div class="joined-room-title">
-              参加中の部屋
-            </div>
-
-
-            <div
-              id="joinedRooms"
-              class="joined-rooms"
-            >
-
-              <!--
-                JavaScriptから参加中の部屋が
-                ここに追加されます。
-
-                雑談は常に一番上に表示します。
-              -->
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- ================================
-             サイドバー下部
-        ================================= -->
-
-        <div class="sidebar-footer">
-
-          <div class="connection-status">
-
-            <span
-              id="connectionDot"
-              class="connection-dot"
-            ></span>
-
-            <span>
-              Veylo
-            </span>
-
-          </div>
-
-        </div>
-
-      </aside>
-
-
-      <!-- ==================================================
-           メイン
-      ================================================== -->
-
-      <main class="chat-area">
-
-
-        <!-- ================================
-             チャットヘッダー
-        ================================= -->
-
-        <header class="chat-header">
-
-          <div class="chat-room-info">
-
-            <div
-              id="roomIcon"
-              class="chat-room-icon"
-            >
-              💬
-            </div>
-
-            <div>
-
-              <h2 id="roomName">
-                雑談
-              </h2>
-
-              <div class="room-subtitle">
-                気軽に話しましょう
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div
-            id="inviteArea"
-            class="invite-area hidden"
-          >
-
-            <span class="invite-label">
-              招待コード
-            </span>
-
-            <button
-              id="inviteCode"
-              type="button"
-              class="invite-code"
-              title="クリックしてコピー"
-            >
-              ------
-            </button>
-
-          </div>
-
-        </header>
-
-
-        <!-- ================================
-             メッセージ
-        ================================= -->
-
-        <div
-          id="messages"
-          class="messages"
-        ></div>
-
-
-        <!-- ================================
-             新着メッセージ
-        ================================= -->
-
-        <button
-          id="newMessageButton"
-          type="button"
-          class="new-message-button hidden"
-        >
-          ↓ 新しいメッセージ
-        </button>
-
-
-        <!-- ================================
-             スクロールボタン
-        ================================= -->
-
-        <div class="scroll-buttons">
-
-          <button
-            id="scrollTopButton"
-            type="button"
-            class="scroll-button"
-            title="上へ"
-          >
-            ↑
-          </button>
-
-          <button
-            id="scrollBottomButton"
-            type="button"
-            class="scroll-button"
-            title="下へ"
-          >
-            ↓
-          </button>
-
-        </div>
-
-
-        <!-- ================================
-             返信プレビュー
-        ================================= -->
-
-        <div
-          id="replyPreview"
-          class="reply-preview hidden"
-        ></div>
-
-
-        <!-- ================================
-             入力
-        ================================= -->
-
-        <div class="message-input-area">
-
-          <form
-            id="messageForm"
-            class="message-form"
-          >
-
-            <input
-              id="messageInput"
-              type="text"
-              autocomplete="off"
-              placeholder="メッセージを入力..."
-              maxlength="2000"
-            >
-
-            <button
-              type="submit"
-              class="send-button"
-              title="送信"
-            >
-              ➤
-            </button>
-
-          </form>
-
-        </div>
-
-      </main>
-
-    </div>
-
-  </div>
-
-
-  <!-- ==================================================
-       ユーザー検索モーダル
-  ================================================== -->
-
-  <div id="userSearchModal" class="modal hidden">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>ユーザーを検索</h2>
-        <button id="closeUserSearchButton" type="button" class="modal-close">×</button>
-      </div>
-      <div class="modal-body">
-        <div class="input-group">
-          <label for="userSearchInput">ユーザー名</label>
-          <input id="userSearchInput" type="text" maxlength="50" autocomplete="off" placeholder="ユーザー名を入力">
-        </div>
-        <div id="userSearchMessage" class="form-message"></div>
-        <div id="userSearchResults" class="user-search-results"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================================================
-       プロフィールモーダル
-  ================================================== -->
-
-  <div id="profileModal" class="modal hidden">
-    <div class="modal-content profile-content">
-      <div class="modal-header">
-        <h2>プロフィール</h2>
-        <button id="closeProfileButton" type="button" class="modal-close">×</button>
+      <div class="hero-background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
       </div>
 
-      <div class="modal-body profile-body">
-        <div class="profile-avatar-editor">
-          <div id="profileAvatar" class="profile-avatar">
-            <img id="profileAvatarImage" class="profile-avatar-image hidden" alt="プロフィールアイコン">
-            <span id="profileAvatarFallback">U</span>
-          </div>
-          <div class="profile-avatar-actions">
-            <input id="profileAvatarInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" class="hidden">
-            <button id="profileAvatarButton" type="button" class="secondary-button">アイコンを変更</button>
-            <button id="removeAvatarButton" type="button" class="text-button hidden">アイコンを削除</button>
-          </div>
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Veylo is here.
         </div>
 
-        <div class="input-group">
-          <label for="profileNameInput">名前</label>
-          <input id="profileNameInput" type="text" maxlength="50" autocomplete="off">
-        </div>
+        <h1>
+          Connect your world.
+          <span>with Veylo.</span>
+        </h1>
 
-        <div class="input-group">
-          <label for="profileBioInput">自己紹介</label>
-          <textarea id="profileBioInput" maxlength="300" rows="5" placeholder="好きなこと、ひとことなどを書いてみましょう！"></textarea>
-          <div class="profile-character-hint"><span>300文字まで</span><span id="profileBioCount">0/300</span></div>
-        </div>
-
-        <div id="profileMessage" class="form-message"></div>
-
-        <div class="profile-footer-actions">
-          <button id="saveProfileButton" type="button" class="primary-button">保存する</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================================================
-       部屋作成モーダル
-  ================================================== -->
-
-  <div
-    id="createModal"
-    class="modal hidden"
-  >
-
-    <div class="modal-content">
-
-      <div class="modal-header">
-
-        <h2>
-          部屋を作成
-        </h2>
-
-        <button
-          id="cancelCreateButton"
-          type="button"
-          class="modal-close"
-        >
-          ×
-        </button>
-
-      </div>
-
-
-      <div class="modal-body">
-
-        <p class="modal-description">
-          新しい部屋を作成して、友達と話しましょう。
+        <p class="hero-description">
+          シンプルで、軽くて、使いやすい。<br>
+          友達や仲間との会話を、もっと自由に。
         </p>
 
+        <div class="hero-buttons">
 
-        <div class="input-group">
-
-          <label for="roomNameInput">
-            部屋の名前
-          </label>
-
-          <input
-            id="roomNameInput"
-            type="text"
-            maxlength="50"
-            autocomplete="off"
-            placeholder="例：ゲーム部屋"
+          <a
+            href="https://veylo.onrender.com/"
+            class="button button-primary"
+            target="_blank"
+            rel="noopener"
           >
+            Veyloを始める
+            <span>→</span>
+          </a>
+
+          <a href="#features" class="button button-secondary">
+            詳しく見る
+            <span>↓</span>
+          </a>
 
         </div>
 
       </div>
 
-
-      <div class="modal-footer">
-
-        <button
-          id="cancelCreateButton"
-          type="button"
-          class="secondary-button"
-        >
-          キャンセル
-        </button>
-
-        <button
-          id="confirmCreateButton"
-          type="button"
-          class="primary-button"
-        >
-          作成する
-        </button>
-
+      <div class="scroll-indicator">
+        <span></span>
+        Scroll
       </div>
 
-    </div>
-
-  </div>
+    </section>
 
 
-  <!-- ==================================================
-       部屋参加モーダル
-  ================================================== -->
+    <!-- =========================
+         Features
+    ========================== -->
 
-  <div
-    id="joinModal"
-    class="modal hidden"
-  >
+    <section class="section features-section" id="features">
 
-    <div class="modal-content">
+      <div class="section-header reveal">
 
-      <div class="modal-header">
+        <span class="section-label">
+          FEATURES
+        </span>
 
         <h2>
-          部屋に参加
+          会話を、もっと自由に。
         </h2>
 
-        <button
-          id="cancelJoinButton"
-          type="button"
-          class="modal-close"
-        >
-          ×
-        </button>
-
-      </div>
-
-
-      <div class="modal-body">
-
-        <p class="modal-description">
-          招待コードを入力してください。
+        <p>
+          Veyloは、必要なものをシンプルにまとめた
+          コミュニケーションプラットフォームです。
         </p>
 
+      </div>
 
-        <div class="input-group">
 
-          <label for="inviteCodeInput">
-            招待コード
-          </label>
+      <div class="features-grid">
 
-          <input
-            id="inviteCodeInput"
-            type="text"
-            maxlength="20"
-            autocomplete="off"
-            placeholder="例：ABC123"
-          >
+        <article class="feature-card reveal">
+
+          <div class="feature-icon">
+            💬
+          </div>
+
+          <h3>リアルタイムチャット</h3>
+
+          <p>
+            仲間とのメッセージをリアルタイムで。
+            スムーズなコミュニケーションを楽しめます。
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="feature-icon">
+            👥
+          </div>
+
+          <h3>ルームでつながる</h3>
+
+          <p>
+            会話する場所を分けて、
+            友達やコミュニティごとに整理できます。
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="feature-icon">
+            🎨
+          </div>
+
+          <h3>自分らしく</h3>
+
+          <p>
+            プロフィールやテーマなどを設定して、
+            自分だけのVeyloを作れます。
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="feature-icon">
+            ⚡
+          </div>
+
+          <h3>シンプルで軽快</h3>
+
+          <p>
+            複雑な操作をできるだけ減らし、
+            会話そのものに集中できる設計です。
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="feature-icon">
+            🌙
+          </div>
+
+          <h3>テーマを選べる</h3>
+
+          <p>
+            明るいライトテーマから、
+            落ち着いたダークテーマまで楽しめます。
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="feature-icon">
+            🔒
+          </div>
+
+          <h3>自分の空間</h3>
+
+          <p>
+            自分たちの会話を楽しめる、
+            パーソナルなコミュニケーション空間を提供します。
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         About
+    ========================== -->
+
+    <section class="section about-section" id="about">
+
+      <div class="about-container">
+
+        <div class="about-text reveal">
+
+          <span class="section-label">
+            ABOUT VEYLO
+          </span>
+
+          <h2>
+            もっとシンプルに。<br>
+            もっと楽しく。
+          </h2>
+
+          <p>
+            Veyloは、友達や仲間と気軽に
+            コミュニケーションを楽しむためのチャットサービスです。
+          </p>
+
+          <p>
+            必要な機能をわかりやすくまとめ、
+            誰でも直感的に使えるサービスを目指しています。
+          </p>
 
         </div>
 
 
-        <div
-          id="joinError"
-          class="form-error"
-        ></div>
+        <div class="about-visual reveal">
+
+          <div class="visual-window">
+
+            <div class="window-header">
+
+              <div class="window-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <span>Veylo</span>
+
+            </div>
+
+
+            <div class="chat-preview">
+
+              <div class="preview-sidebar">
+
+                <div class="preview-logo">
+                  V
+                </div>
+
+                <div class="preview-room active">
+                  # general
+                </div>
+
+                <div class="preview-room">
+                  # chat
+                </div>
+
+                <div class="preview-room">
+                  # gaming
+                </div>
+
+              </div>
+
+
+              <div class="preview-chat">
+
+                <div class="preview-title">
+                  # general
+                </div>
+
+                <div class="messages">
+
+                  <div class="message">
+                    <div class="avatar">A</div>
+
+                    <div>
+                      <strong>Alex</strong>
+                      <p>Welcome to Veylo!</p>
+                    </div>
+                  </div>
+
+
+                  <div class="message">
+                    <div class="avatar">N</div>
+
+                    <div>
+                      <strong>Noa</strong>
+                      <p>Let's chat 👋</p>
+                    </div>
+                  </div>
+
+
+                  <div class="message">
+                    <div class="avatar">V</div>
+
+                    <div>
+                      <strong>Veylo</strong>
+                      <p>Have a great day!</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
-
-      <div class="modal-footer">
-
-        <button
-          id="cancelJoinButton"
-          type="button"
-          class="secondary-button"
-        >
-          キャンセル
-        </button>
-
-        <button
-          id="confirmJoinButton"
-          type="button"
-          class="primary-button"
-        >
-          参加する
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
+    </section>
 
 
-  <!-- ==================================================
-       設定モーダル
-  ================================================== -->
+    <!-- =========================
+         Preview
+    ========================== -->
 
-  <div
-    id="settingsModal"
-    class="modal hidden"
-  >
+    <section class="section preview-section" id="preview">
 
-    <div class="modal-content settings-content">
+      <div class="section-header reveal">
 
-      <div class="modal-header">
+        <span class="section-label">
+          SIMPLE EXPERIENCE
+        </span>
 
         <h2>
-          設定
+          必要なものを、<br>
+          必要な場所に。
         </h2>
 
-        <button
-          id="closeSettingsButton"
-          type="button"
-          class="modal-close"
-        >
-          ×
-        </button>
+        <p>
+          VeyloはシンプルなUIで、
+          メッセージをすぐに見つけられるよう設計されています。
+        </p>
 
       </div>
 
 
-      <div class="modal-body">
+      <div class="large-preview reveal">
 
+        <div class="preview-topbar">
 
-        <!-- ユーザー名 -->
+          <div class="topbar-logo">
+            <span>V</span>
+            Veylo
+          </div>
 
-        <div class="settings-group">
-
-          <label for="settingsUsernameInput">
-            ユーザー名
-          </label>
-
-          <input
-            id="settingsUsernameInput"
-            type="text"
-            readonly
-          >
-
-        </div>
-
-
-        <!-- テーマ -->
-
-        <div class="settings-group">
-
-          <div class="setting-row">
-            <div>
-              <div class="setting-title">テーマ</div>
-              <div class="setting-description">ライト・グレー・ダークから選べます</div>
-            </div>
-
-            <select id="themeSelect" class="theme-select" aria-label="テーマ">
-              <option value="light">☀️ ライト</option>
-              <option value="gray">🩶 グレー</option>
-              <option value="dark">🌙 ダーク</option>
-            </select>
+          <div class="topbar-user">
+            <div class="small-avatar">N</div>
+            <span>Noa</span>
           </div>
 
         </div>
 
 
-        <!-- 言語 -->
+        <div class="large-preview-body">
 
-        <div class="settings-group">
+          <aside class="fake-sidebar">
 
-          <label for="languageSelect">
-            言語
-          </label>
+            <div class="fake-sidebar-title">
+              ROOMS
+            </div>
 
-          <select id="languageSelect">
+            <div class="fake-room active">
+              <span>#</span>
+              general
+            </div>
 
-            <option value="ja">
-              日本語
-            </option>
+            <div class="fake-room">
+              <span>#</span>
+              random
+            </div>
 
-            <option value="en">
-              English
-            </option>
+            <div class="fake-room">
+              <span>#</span>
+              gaming
+            </div>
 
-          </select>
-
-        </div>
+          </aside>
 
 
-        <!-- 通知音 -->
+          <div class="fake-chat">
 
-        <div class="settings-group">
+            <div class="fake-chat-header">
 
-          <div class="setting-row">
-
-            <div>
-
-              <div class="setting-title">
-                通知音
-              </div>
-
-              <div class="setting-description">
-                新しいメッセージが届いたときに音を鳴らします
+              <div>
+                <strong># general</strong>
+                <small>みんなのチャット</small>
               </div>
 
             </div>
 
-            <button
-              id="notificationSoundToggleButton"
-              type="button"
-              class="toggle-button"
-            >
-              OFF
-            </button>
 
-          </div>
+            <div class="fake-messages">
 
-        </div>
+              <div class="fake-message">
 
+                <div class="fake-avatar">
+                  A
+                </div>
 
-        <!-- デスクトップ通知 -->
+                <div class="fake-message-content">
 
-        <div class="settings-group">
+                  <div>
+                    <strong>Alex</strong>
+                    <time>16:20</time>
+                  </div>
 
-          <div class="setting-row">
+                  <p>
+                    今日もVeyloで話そう！
+                  </p>
 
-            <div>
+                </div>
 
-              <div class="setting-title">
-                デスクトップ通知
               </div>
 
-              <div class="setting-description">
-                他のタブを見ているときに通知を表示します
+
+              <div class="fake-message">
+
+                <div class="fake-avatar">
+                  N
+                </div>
+
+                <div class="fake-message-content">
+
+                  <div>
+                    <strong>Noa</strong>
+                    <time>16:21</time>
+                  </div>
+
+                  <p>
+                    もちろん！✨
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="fake-message">
+
+                <div class="fake-avatar">
+                  Y
+                </div>
+
+                <div class="fake-message-content">
+
+                  <div>
+                    <strong>Yuki</strong>
+                    <time>16:22</time>
+                  </div>
+
+                  <p>
+                    Veyloいい感じ！
+                  </p>
+
+                </div>
+
               </div>
 
             </div>
 
-            <button
-              id="desktopNotificationToggleButton"
-              type="button"
-              class="toggle-button"
-            >
-              OFF
-            </button>
+
+            <div class="fake-input">
+              メッセージを入力...
+              <span>➤</span>
+            </div>
 
           </div>
-
-        </div>
-
-
-        <!-- パスワード変更 -->
-
-        <div class="settings-group">
-
-          <div class="setting-title">
-            パスワード変更
-          </div>
-
-          <input
-            id="currentPasswordInput"
-            type="password"
-            placeholder="現在のパスワード"
-            autocomplete="current-password"
-          >
-
-          <input
-            id="newPasswordInput"
-            type="password"
-            placeholder="新しいパスワード（8文字以上）"
-            autocomplete="new-password"
-          >
-
-          <div id="passwordChangeMessage" class="form-message"></div>
-
-          <button
-            id="changePasswordButton"
-            type="button"
-            class="secondary-button"
-          >
-            パスワードを変更
-          </button>
-
-        </div>
-
-
-        <!-- アカウント削除 -->
-
-        <div class="settings-group danger-zone">
-
-          <div class="setting-title">
-            アカウント削除
-          </div>
-
-          <div class="setting-description">
-            アカウントとすべてのメッセージ・部屋・DMが完全に削除されます。この操作は取り消せません。
-          </div>
-
-          <input
-            id="deleteAccountPasswordInput"
-            type="password"
-            placeholder="確認のためパスワードを入力"
-            autocomplete="current-password"
-            class="hidden"
-          >
-
-          <div id="deleteAccountMessage" class="form-message"></div>
-
-          <button
-            id="deleteAccountButton"
-            type="button"
-            class="danger-button"
-          >
-            アカウントを削除する
-          </button>
 
         </div>
 
       </div>
 
+    </section>
 
-      <div class="modal-footer">
 
-        <button
-          id="logoutButton"
-          type="button"
-          class="danger-button"
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta-section">
+
+      <div class="cta-glow"></div>
+
+      <div class="cta-content reveal">
+
+        <span class="section-label">
+          READY?
+        </span>
+
+        <h2>
+          Veyloを<br>
+          はじめよう。
+        </h2>
+
+        <p>
+          あなたの会話を、新しい場所へ。
+        </p>
+
+        <a
+          href="https://veylo.onrender.com/"
+          class="button button-primary cta-button"
+          target="_blank"
+          rel="noopener"
         >
-          ログアウト
-        </button>
+          Veyloを使う
+          <span>→</span>
+        </a>
 
-        <div class="modal-footer-right">
+      </div>
 
-          <button
-            id="closeSettingsButtonFooter"
-            data-close-settings
-            type="button"
-            class="secondary-button"
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       Footer
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+
+          <span class="logo-mark">
+            V
+          </span>
+
+          <span class="logo-text">
+            Veylo
+          </span>
+
+        </a>
+
+        <p>
+          Connect your world.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+
+          <h4>Veylo</h4>
+
+          <a href="#about">
+            Veyloについて
+          </a>
+
+          <a href="#features">
+            特徴
+          </a>
+
+          <a href="#preview">
+            プレビュー
+          </a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Links</h4>
+
+          <a
+            href="https://veylo.onrender.com/"
+            target="_blank"
+            rel="noopener"
           >
-            閉じる
-          </button>
-
-          <button
-            id="saveSettingsButton"
-            type="button"
-            class="primary-button"
-          >
-            保存
-          </button>
+            Veyloを使う
+          </a>
 
         </div>
 
@@ -1140,20 +647,23 @@
 
     </div>
 
-  </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span> Veylo. All rights reserved.
+      </span>
+
+      <span>
+        Made with ❤️
+      </span>
+
+    </div>
+
+  </footer>
 
 
-  <!-- ==================================================
-       Socket.IO
-  ================================================== -->
-
-  <script src="/socket.io/socket.io.js"></script>
-
-  <!-- ==================================================
-       App.js
-  ================================================== -->
-
-  <script src="/app.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
